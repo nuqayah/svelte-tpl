@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+
+/dist
+/misc
+
+package-lock.json
+pnpm-lock.yaml
+
+auto-imports.d.ts

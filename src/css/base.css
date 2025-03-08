@@ -3,15 +3,7 @@
 
 @layer components {
   .form-select {
-    @apply appearance-none
-      px-2
-      pe-5
-      border border-solid border-gray-300
-      rounded
-      transition
-      ease-in-out
-      bg-no-repeat
-      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
+    @apply appearance-none rounded border border-solid border-gray-300 bg-no-repeat px-2 pe-5 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none;
   }
 }
 
@@ -19,13 +11,17 @@
 @font-face {
   font-family: Kitab;
   src: url(https://fonts.nuqayah.com/kitab-base.woff2?v4);
-  unicode-range: U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
 }
 @font-face {
   font-family: Kitab;
   src: url(https://fonts.nuqayah.com/kitab-base-bold.woff2?v4);
   font-weight: 700;
-  unicode-range: U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
 }
 @font-face {
   font-family: Kitab;
@@ -37,6 +33,38 @@
   src: url(https://fonts.nuqayah.com/kitab-phrases.woff2?v4);
   font-weight: 700;
   unicode-range: U+6DE, U+6E9, U+E100-E103, U+FD3E-FD45, U+FD47-FD4F, U+FDFA-FDFB, U+FDFD-FDFF;
+}
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+}
+/* needed for ios */
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+}
+/* needed for ios */
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C, U+670-671, U+6CC,
+    U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3, U+FD3E-FD3F, U+FDF2;
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+}
+@font-face {
+  font-family: SafariFakeFont;
+  src: local('Arial');
+  unicode-range: U+0;
 }
 
 :root {
@@ -44,10 +72,24 @@
   --light-blue: #2995dc;
 }
 
-html {font-size: 22px;}
-@media (max-width: 992px) { html {font-size: 21px;} }
-@media (max-width: 768px) { html {font-size: 18.5px;} }
-@media (max-width: 576px) { html {font-size: 17px;} }
+html {
+  font-size: 22px;
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 18.5px;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 17px;
+  }
+}
 
 body {
   color: #444;
@@ -62,10 +104,15 @@ html.safari body {
   -webkit-overflow-scrolling: touch;
 }
 
-a, a:visited, .btn-link {
+a,
+a:visited,
+.btn-link {
   color: var(--light-blue);
 }
-a, button, label, select {
+a,
+button,
+label,
+select {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -98,28 +145,37 @@ html.safari button:active {
 html.user-is-tabbing button {
   outline: revert;
 }
-label, select, input[type=range] {
+label,
+select,
+input[type='range'] {
   cursor: pointer;
 }
-input, textarea {
+input,
+textarea {
   padding: 0.2rem 0.3rem;
   border-radius: 3px;
   margin-bottom: 0.2rem;
   border: 1px solid #aaa;
 }
-form input, form textarea {
+form input,
+form textarea {
   display: block;
   width: 100%;
 }
-input:is([type="text"],[type="email"],[type="number"]):focus, textarea:focus {
+input:is([type='text'], [type='email'], [type='number']):focus,
+textarea:focus {
   border-color: #66afe9;
   outline: 0;
   box-shadow: 0 0 6px #77777761;
 }
-html.ios input, html.ios select, html.ios textarea {
+html.ios input,
+html.ios select,
+html.ios textarea {
   font-size: 16px !important;
 }
-input[type=email], input[type=number], input[type=password] {
+input[type='email'],
+input[type='number'],
+input[type='password'] {
   direction: ltr;
 }
 ::placeholder {
@@ -131,7 +187,7 @@ input[type=email], input[type=number], input[type=password] {
   background-position: var(--pos) 0.25rem center;
   background-size: 16px 12px;
 }
-html[dir=rtl] .form-select {
+html[dir='rtl'] .form-select {
   --pos: left;
 }
 

@@ -1,4 +1,5 @@
 import {fontFamily} from 'tailwindcss/defaultTheme'
+import plugin from 'tailwindcss/plugin'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,11 +11,20 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Kitab', ...fontFamily.sans],
+                prose: ['Kitab', ...fontFamily.serif],
             },
             listStyleType: {
                 arabic: 'arabic-indic',
             },
         },
     },
+    plugins: [
+        plugin(function ({addBase}) {
+            addBase({
+                'html[dir="rtl"]': {
+                    fontFamily: ['SafariFakeFont', 'Noto', ...fontFamily.sans].join(', '),
+                },
+            })
+        }),
+    ],
 }

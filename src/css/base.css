@@ -1,5 +1,6 @@
 /* tailwind */
 @import 'tailwindcss';
+@import 'tw-animate-css';
 
 @layer components {
   .form-select {

@@ -41,6 +41,7 @@ export default {
         alias: [
             {find: '~', replacement: path.resolve('src')},
             {find: '$lib', replacement: path.resolve('src/lib')},
+            {find: '$ui', replacement: path.resolve('src/lib/components/ui')},
         ],
     },
     define: is_build ? {} : vars,

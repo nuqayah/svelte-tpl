@@ -1,31 +1,40 @@
-<Dialog.Root>
-    <Dialog.Trigger class={buttonVariants({variant: 'outline'})}>Edit Profile</Dialog.Trigger>
-    <Dialog.Content class="sm:max-w-[425px]">
-        <Dialog.Header>
-            <Dialog.Title>Edit profile</Dialog.Title>
-            <Dialog.Description>
-                Make changes to your profile here. Click save when you're done.
-            </Dialog.Description>
-        </Dialog.Header>
-        <div class="grid gap-4 py-4">
-            <div class="grid grid-cols-4 items-center gap-4">
-                <Label for="name" class="text-right">Name</Label>
-                <Input id="name" value="Pedro Duarte" class="col-span-3" />
-            </div>
-            <div class="grid grid-cols-4 items-center gap-4">
-                <Label for="username" class="text-right">Username</Label>
-                <Input id="username" value="@peduarte" class="col-span-3" />
-            </div>
-        </div>
-        <Dialog.Footer>
-            <Button type="submit">Save changes</Button>
-        </Dialog.Footer>
-    </Dialog.Content>
-</Dialog.Root>
+<div class={isDarkMode ? 'dark' : ''}>
+    <div class="bg-background text-foreground min-h-dvh antialiased" transition:fade>
+        <!-- Navigation -->
+        <Nav {isDarkMode} {toggleDarkMode} />
 
-<script lang="ts">
-import {Button, buttonVariants} from '$ui/button/index.js'
-import * as Dialog from '$ui/dialog/index.js'
-import {Input} from '$ui/input/index.js'
-import {Label} from '$ui/label/index.js'
+        <!-- Main content -->
+        <main class="flex flex-col">
+            <!-- Hero section -->
+            <Hero />
+
+            <!-- Features section -->
+            <Features />
+
+            <!-- Demo showcase section -->
+            <DemoShowcase />
+        </main>
+
+        <!-- Footer -->
+        <Footer />
+    </div>
+</div>
+
+<script>
+// Import layout components
+import {fade} from 'svelte/transition'
+
+import DemoShowcase from './components/demo-showcase.svelte'
+import Features from './components/feature/features.svelte'
+import Hero from './components/hero/hero.svelte'
+import Footer from './components/footer.svelte'
+import Nav from './components/nav/nav.svelte'
+
+// Dark mode state
+let isDarkMode = $state(false)
+
+// Toggle dark mode
+const toggleDarkMode = () => {
+    isDarkMode = !isDarkMode
+}
 </script>

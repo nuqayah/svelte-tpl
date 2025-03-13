@@ -36,7 +36,15 @@ export default {
             },
         },
     },
-    server: {host: !!process.env.VITE_HOST},
+    server: {
+        host: !!process.env.VITE_HOST || '0.0.0.0',
+        proxy: {
+            '^(/api|/static).*': {
+                target: `http://127.0.0.1:${process.env.API_PORT || 6000}`,
+                ws: true,
+            },
+        },
+    },
     resolve: {
         alias: [
             {find: '~', replacement: path.resolve('src')},

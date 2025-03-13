@@ -12,6 +12,11 @@
         </p>
     </div>
 
+    <!-- FastAPI Integration Showcase -->
+    <div class="mt-16">
+        <ApiShowcase />
+    </div>
+
     <div class="mx-auto mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <!-- Form Card -->
         <div class="col-span-1" in:fly={{y: 20, duration: 400, delay: 100}}>
@@ -181,6 +186,7 @@
 import {CalendarIcon, CheckIcon, CrownIcon, UserIcon} from 'lucide-svelte'
 import {fade, fly} from 'svelte/transition'
 
+import ApiShowcase from './api-showcase.svelte'
 import {Button} from '$ui/button/index.js'
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '$ui/card/index.js'
 import {Input} from '$ui/input/index.js'

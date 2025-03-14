@@ -118,14 +118,13 @@
 
 <script>
 import {AlertCircleIcon, LoaderIcon, PackageIcon, RefreshCwIcon, ServerIcon} from 'lucide-svelte'
-import {onMount} from 'svelte'
 import {fly} from 'svelte/transition'
 
+import * as Alert from '$ui/alert/index.js'
+import {Badge} from '$ui/badge/index.js'
 // Import UI components with correct paths
 import {Button} from '$ui/button/index.js'
 import * as Card from '$ui/card/index.js'
-import * as Alert from '$ui/alert/index.js'
-import {Badge} from '$ui/badge/index.js'
 
 // State
 let products = $state([])
@@ -153,8 +152,5 @@ async function fetchProducts() {
     }
 }
 
-// Fetch products on component mount
-onMount(() => {
-    fetchProducts()
-})
+fetchProducts()
 </script>

@@ -38,10 +38,7 @@ import {ArrowRightIcon} from 'lucide-svelte'
 
 import * as Card from '$ui/card/index.js'
 
-export let icon
-export let title
-export let description
-export let link
+let {icon, title, description, link} = $props()
 
 const Icon = icon
 </script>

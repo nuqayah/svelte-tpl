@@ -20,7 +20,7 @@ python.uv_venv_auto = true
 
 [env]
 VITE_PORT = 5020
-API_PORT = 8000
+API_PORT = 8005
 API_WORKERS = 4
 
 POSTGRES_PORT = 5432

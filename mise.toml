@@ -15,6 +15,9 @@ description = 'Start FastAPI backend'
 env = { FORCE_COLOR = '1' }
 run = 'uvicorn api.main:app --reload --port $API_PORT'
 
+[settings]
+python.uv_venv_auto = true
+
 [env]
 VITE_PORT = 5020
 API_PORT = 8000

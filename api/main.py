@@ -6,6 +6,7 @@ from pydantic import BaseModel
 app = FastAPI(
     title="fastapi-sv",
     docs_url="/api/docs",
+    openapi_url="/api/openapi.json",
 )
 
 

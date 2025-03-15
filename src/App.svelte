@@ -1,15 +1,16 @@
 <main>
-  <Component params={route.params} />
-  {#if is404}
-    <h1>404</h1>
-    <a href="/">Home</a>
-  {/if}
+    <Component params={route.params} />
+    {#if is404}
+        <h1>404</h1>
+        <a href="/">Home</a>
+    {/if}
 </main>
 
 <script module>
 import navaid from 'navaid'
 
 // prettier-ignore
+/** @type {Array<[string, Promise<any>]>} */
 const routes = [
     ['/', import('./Home.svelte')],
 ]

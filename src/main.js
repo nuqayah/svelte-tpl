@@ -1,7 +1,7 @@
 import './css/tailwind.css'
 import './css/base.css'
 import './util/preinit.js'
-import './store.js'
+import './stores.svelte.js'
 
 import {mount} from 'svelte'
 

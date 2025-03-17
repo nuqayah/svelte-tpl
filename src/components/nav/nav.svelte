@@ -28,9 +28,9 @@
                 variant="ghost"
                 size="icon"
                 class="h-9 w-9"
-                onclick={() => (isMenuOpen = !isMenuOpen)}
+                onclick={() => (is_menu_open = !is_menu_open)}
             >
-                {#if isMenuOpen}
+                {#if is_menu_open}
                     <XIcon class="h-5 w-5" />
                 {:else}
                     <MenuIcon class="h-5 w-5" />
@@ -44,14 +44,14 @@
                 variant="ghost"
                 size="icon"
                 class="relative overflow-hidden"
-                onclick={toggleDarkMode}
+                onclick={toggle_dark_mode}
             >
                 <div
                     class="absolute inset-0 rounded-md opacity-20 transition-colors duration-500"
-                    class:bg-yellow-400={!isDarkMode}
-                    class:bg-indigo-500={isDarkMode}
+                    class:bg-yellow-400={!is_dark_mode}
+                    class:bg-indigo-500={is_dark_mode}
                 ></div>
-                {#if isDarkMode}
+                {#if is_dark_mode}
                     <SunIcon class="h-5 w-5 rotate-0 transition-transform duration-500" />
                 {:else}
                     <MoonIcon class="h-5 w-5 rotate-0 transition-transform duration-500" />
@@ -61,7 +61,7 @@
     </nav>
 
     <!-- Mobile menu -->
-    {#if isMenuOpen}
+    {#if is_menu_open}
         <div class="md:hidden" transition:slide={{duration: 200}}>
             <div class="bg-background space-y-3 border-b px-4 py-4">
                 <Button variant="ghost" class="w-full justify-start" href="#features"
@@ -74,8 +74,8 @@
                 >
                 <div class="flex items-center justify-between pt-2">
                     <Button class="w-full">Get Started</Button>
-                    <Button variant="ghost" size="icon" class="ml-2" onclick={toggleDarkMode}>
-                        {#if isDarkMode}
+                    <Button variant="ghost" size="icon" class="ml-2" onclick={toggle_dark_mode}>
+                        {#if is_dark_mode}
                             <SunIcon class="h-5 w-5" />
                         {:else}
                             <MoonIcon class="h-5 w-5" />
@@ -92,11 +92,19 @@ import {MenuIcon, MoonIcon, SunIcon, XIcon} from 'lucide-svelte'
 import {slide} from 'svelte/transition'
 
 import {Button} from '$ui/button/index.js'
+import {appstate} from '~/stores.svelte.js'
 
 import NavLinks from './nav-links.svelte'
 
-let {isDarkMode, toggleDarkMode} = $props()
-
 // Mobile menu state
-let isMenuOpen = $state(false)
+let is_menu_open = $state(false)
+
+function toggle_dark_mode() {
+    appstate.update(state => ({
+        ...state,
+        theme: state.theme === 'dark' ? 'light' : 'dark',
+    }))
+}
+
+let is_dark_mode = $derived(appstate.theme === 'dark')
 </script>

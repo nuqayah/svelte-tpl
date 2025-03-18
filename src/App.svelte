@@ -1,8 +1,10 @@
 <main>
     <Component params={route.params} />
     {#if is404}
-        <h1>404</h1>
-        <a href="/">Home</a>
+        <div class="flex h-screen flex-col items-center justify-center">
+            <h1>Page not found</h1>
+            <a class="block" href="/">Home</a>
+        </div>
     {/if}
 </main>
 

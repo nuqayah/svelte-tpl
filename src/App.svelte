@@ -1,15 +1,19 @@
 <main>
-    <Component params={route.params} />
-    {#if is404}
-        <div class="flex h-screen flex-col items-center justify-center">
-            <h1>Page not found</h1>
-            <a class="block" href="/">Home</a>
-        </div>
+    {#if $session.loaded}
+        <Component params={route.params} />
+        {#if is404}
+            <div class="flex h-screen flex-col items-center justify-center">
+                <h1>Page not found</h1>
+                <a class="block" href="/">Home</a>
+            </div>
+        {/if}
     {/if}
 </main>
 
 <script module>
 import navaid from 'navaid'
+
+import {session} from '~/stores.svelte.js'
 
 // prettier-ignore
 /** @type {Array<[string, Promise<any>]>} */
@@ -43,7 +47,13 @@ for (const [path, cmp_] of routes) {
     })
 }
 
-router.listen()
+window.router_initialized = !!window.router_initialized
+session.subscribe($session => {
+    if (!window.router_initialized && $session.loaded) {
+        setTimeout(() => router.listen(), 10)
+        window.router_initialized = true
+    }
+})
 </script>
 
 <script>

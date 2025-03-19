@@ -9,6 +9,7 @@ declare global {
         BASE_TITLE: string
         _VH_OFFSET: number
         _useragent: {ios: string; safari: string; no_keyboard: string}
+        router_initialized: boolean
     }
     interface Document {
         startViewTransition: (cb) => void

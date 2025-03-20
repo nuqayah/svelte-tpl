@@ -14,14 +14,14 @@ export const session = writable({
     if (appstate_idb) appstate.set(appstate_idb)
 
     session.update(v => ({...v, loaded: true}))
+
+    appstate.subscribe(state => {
+        document.documentElement.classList.toggle('dark', state.theme === 'dark')
+    })
+
+    appstate.subscribe(
+        debounce(data => {
+            kv.set('appstate', data)
+        }, 200),
+    )
 })()
-
-appstate.subscribe(state => {
-    document.documentElement.classList.toggle('dark', state.theme === 'dark')
-})
-
-appstate.subscribe(
-    debounce(data => {
-        kv.set('appstate', data)
-    }, 200),
-)

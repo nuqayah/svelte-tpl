@@ -36,7 +36,10 @@ export default {
             },
         },
     },
-    server: {host: !!process.env.VITE_HOST},
+    server: {
+        host: !!process.env.VITE_HOST || '0.0.0.0',
+        port: +(process.env.VITE_PORT || 5100),
+    },
     resolve: {
         alias: [
             {find: '~', replacement: path.resolve('src')},

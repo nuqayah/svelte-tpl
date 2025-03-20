@@ -38,6 +38,7 @@ export default {
     },
     server: {
         host: !!process.env.VITE_HOST || '0.0.0.0',
+        port: +(process.env.VITE_PORT || 5100),
         proxy: {'^/api.*': {target: `http://localhost:${process.env.API_PORT || 8005}`}},
     },
     resolve: {

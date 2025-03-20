@@ -1,7 +1,31 @@
 from fastapi import FastAPI
 from typing import List, Dict, Any
 from pydantic import BaseModel
+from os import getenv
+import logging
 
+#################################################
+# Logging
+#################################################
+
+IS_DEBUG: bool = getenv('IS_DEBUG', '').lower() in ('true', '1')
+LOG_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
+
+if IS_DEBUG:
+    from rich.logging import Console, RichHandler
+
+    logging.basicConfig(
+        format='[%(module)s.%(funcName)s:%(lineno)d]: %(message)s',  # rich adds time and level
+        level=logging.INFO,
+        handlers=[RichHandler(rich_tracebacks=True, console=Console(width=150))],
+        datefmt=LOG_DATE_FORMAT,
+    )
+else:
+    logging.basicConfig(
+        format='%(asctime)s [%(levelname)s] %(name)s [%(module)s.%(funcName)s:%(lineno)d]: %(message)s',
+        level=logging.INFO,
+        datefmt=LOG_DATE_FORMAT,
+    )
 
 app = FastAPI(
     title="fastapi-sv",

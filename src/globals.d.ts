@@ -5,6 +5,10 @@ declare global {
     }
 
     interface Window {
+        __BUILD_DATE__: string
+        __BUILD_HASH__: string
+        __APP_VERSION__: string
+
         __DEBUG__: boolean
         BASE_TITLE: string
         _VH_OFFSET: number

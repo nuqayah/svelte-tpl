@@ -45,7 +45,8 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild",
-      "lefthook"
+      "lefthook",
+      "svelte-preprocesses"
     ]
   },
   "scripts": {

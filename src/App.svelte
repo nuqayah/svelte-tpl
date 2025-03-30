@@ -2,9 +2,9 @@
     {#if $session.loaded}
         <Component params={route.params} />
         {#if is404}
-            <div class="flex h-screen flex-col items-center justify-center">
+            <div class="flex h-screen flex-col items-center justify-center text-2xl font-bold">
                 <h1>Page not found</h1>
-                <a class="block" href="/">Home</a>
+                <a class="block text-blue-600" href="/">Home</a>
             </div>
         {/if}
     {/if}

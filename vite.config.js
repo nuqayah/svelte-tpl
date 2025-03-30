@@ -37,6 +37,9 @@ export default {
         },
     },
     server: {
+        watch: {
+            ignored: 'android,ios,dist,dist-native'.split(',').map(x => path.resolve(x)),
+        },
         host: !!process.env.VITE_HOST || '0.0.0.0',
         port: +(process.env.VITE_PORT || 5100),
     },

@@ -88,11 +88,11 @@
 </header>
 
 <script>
-import {MenuIcon, MoonIcon, SunIcon, XIcon} from 'lucide-svelte'
+import {MenuIcon, MoonIcon, SunIcon, XIcon} from '@lucide/svelte'
 import {slide} from 'svelte/transition'
 
-import {Button} from '$ui/button/index.js'
 import {appstate} from '~/stores.svelte.js'
+import {Button} from '$ui/button/index.js'
 
 import NavLinks from './nav-links.svelte'
 

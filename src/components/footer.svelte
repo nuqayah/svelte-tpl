@@ -341,7 +341,8 @@
 </footer>
 
 <script lang="ts">
-import {GithubIcon, TwitterIcon} from 'lucide-svelte'
+import {GithubIcon, TwitterIcon} from '@lucide/svelte'
+
 import {Button} from '$ui/button/index.js'
 import * as Dialog from '$ui/dialog/index.js'
 </script>

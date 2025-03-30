@@ -178,7 +178,7 @@
 </section>
 
 <script>
-import {CalendarIcon, CheckIcon, CrownIcon, UserIcon} from 'lucide-svelte'
+import {CalendarIcon, CheckIcon, CrownIcon, UserIcon} from '@lucide/svelte'
 import {fade, fly} from 'svelte/transition'
 
 import {Button} from '$ui/button/index.js'

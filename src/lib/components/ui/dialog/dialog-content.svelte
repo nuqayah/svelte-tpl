@@ -19,8 +19,8 @@
 </Dialog.Portal>
 
 <script>
+import X from '@lucide/svelte/icons/x'
 import {Dialog as DialogPrimitive} from 'bits-ui'
-import X from 'lucide-svelte/icons/x'
 
 import {cn} from '$lib/utils.js'
 

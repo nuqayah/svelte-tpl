@@ -28,7 +28,7 @@
 </section>
 
 <script>
-import {ArrowRightIcon, BoxesIcon, CodeIcon, PaletteIcon} from 'lucide-svelte'
+import {ArrowRightIcon, BoxesIcon, CodeIcon, PaletteIcon} from '@lucide/svelte'
 import {fade, fly} from 'svelte/transition'
 
 import {Button} from '$ui/button/index.js'

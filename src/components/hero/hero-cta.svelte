@@ -21,7 +21,7 @@
 </div>
 
 <script>
-import {BookOpenIcon, GithubIcon, RocketIcon} from 'lucide-svelte'
+import {BookOpenIcon, GithubIcon, RocketIcon} from '@lucide/svelte'
 
 import {Button} from '$ui/button/index.js'
 </script>

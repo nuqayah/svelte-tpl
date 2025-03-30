@@ -34,7 +34,7 @@
 </Card.Root>
 
 <script>
-import {ArrowRightIcon} from 'lucide-svelte'
+import {ArrowRightIcon} from '@lucide/svelte'
 
 import * as Card from '$ui/card/index.js'
 

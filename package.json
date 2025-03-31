@@ -31,6 +31,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-svelte": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "simple-icons": "^14.12.0",
     "svelte": "^5.23.0",
     "svelte-french-toast": "^2.0.0-alpha.0",
     "tailwind-merge": "^3.0.2",

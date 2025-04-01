@@ -2,9 +2,8 @@ node_modules
 .DS_Store
 
 /dist
+/dist-native
 /misc
 
-package-lock.json
-pnpm-lock.yaml
-
 auto-imports.d.ts
+/src/screenshots

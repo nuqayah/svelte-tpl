@@ -68,11 +68,6 @@
   unicode-range: U+0;
 }
 
-:root {
-  --dark-blue: #216693;
-  --light-blue: #2995dc;
-}
-
 html {
   font-size: 22px;
 }
@@ -105,11 +100,6 @@ html.safari body {
   -webkit-overflow-scrolling: touch;
 }
 
-a,
-a:visited,
-.btn-link {
-  color: var(--light-blue);
-}
 a,
 button,
 label,

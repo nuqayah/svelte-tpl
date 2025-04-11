@@ -98,13 +98,13 @@ import NavLinks from './nav-links.svelte'
 
 // Mobile menu state
 let is_menu_open = $state(false)
+let is_dark_mode = $derived(appstate.theme === 'dark')
 
 function toggle_dark_mode() {
     appstate.update(state => ({
         ...state,
         theme: state.theme === 'dark' ? 'light' : 'dark',
     }))
+    is_dark_mode = !is_dark_mode
 }
-
-let is_dark_mode = $derived(appstate.theme === 'dark')
 </script>

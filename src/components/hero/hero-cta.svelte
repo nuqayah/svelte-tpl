@@ -11,7 +11,9 @@
         variant="outline"
         class="hover:bg-primary/5 h-12 border-2 transition-all duration-300"
     >
-        <GithubIcon class="mr-2 h-5 w-5" />
+        <div class="mr-2 h-5 w-5 fill-[#181717] dark:fill-[#ffffff]">
+            {@html siGithub.svg}
+        </div>
         Star on GitHub
     </Button>
     <Button size="lg" variant="ghost" class="hover:bg-muted/50 h-12 transition-all duration-300">
@@ -21,7 +23,8 @@
 </div>
 
 <script>
-import {BookOpenIcon, GithubIcon, RocketIcon} from '@lucide/svelte'
+import {BookOpenIcon, RocketIcon} from '@lucide/svelte'
+import {siGithub} from 'simple-icons'
 
 import {Button} from '$ui/button/index.js'
 </script>

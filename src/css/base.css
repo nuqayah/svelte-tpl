@@ -1,6 +1,7 @@
 /* tailwind */
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer components {
   .form-select {

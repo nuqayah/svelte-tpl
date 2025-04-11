@@ -23,13 +23,17 @@
                         href="https://github.com/nuqayah"
                         class="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                        <GithubIcon class="h-5 w-5" />
+                        <div class=" h-5 w-5 fill-[#181717] dark:fill-[#ffffff]">
+                            {@html siGithub.svg}
+                        </div>
                     </a>
                     <a
                         href="https://x.com/nuqayah"
                         class="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                        <TwitterIcon class="h-5 w-5" />
+                        <div class="h-5 w-5 fill-[#000000]">
+                            {@html siX.svg}
+                        </div>
                     </a>
                     <a
                         href="https://nuqayah.com"
@@ -341,7 +345,7 @@
 </footer>
 
 <script lang="ts">
-import {GithubIcon, TwitterIcon} from '@lucide/svelte'
+import {siGithub, siX} from 'simple-icons'
 
 import {Button} from '$ui/button/index.js'
 import * as Dialog from '$ui/dialog/index.js'

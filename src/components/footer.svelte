@@ -5,9 +5,9 @@
             <div class="space-y-4">
                 <div class="flex items-center gap-2">
                     <div
-                        class="bg-primary/10 relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg"
+                        class="bg-primary/10 relative flex size-9 items-center justify-center overflow-hidden rounded-lg"
                     >
-                        <img src="nuqayah.png" alt="Logo" class="h-6 w-6" />
+                        <img src="nuqayah.png" alt="Logo" class="size-6" />
                     </div>
                     <span
                         class="from-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
@@ -23,7 +23,7 @@
                         href="https://github.com/nuqayah"
                         class="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                        <div class=" h-5 w-5 fill-[#181717] dark:fill-[#ffffff]">
+                        <div class="size-5 fill-[#181717] dark:fill-[#ffffff]">
                             {@html siGithub.svg}
                         </div>
                     </a>
@@ -31,7 +31,7 @@
                         href="https://x.com/nuqayah"
                         class="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                        <div class="h-5 w-5 fill-[#000000]">
+                        <div class="size-5 fill-[#000000]">
                             {@html siX.svg}
                         </div>
                     </a>
@@ -39,7 +39,7 @@
                         href="https://nuqayah.com"
                         class="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                        <img src="nuqayah.png" alt="Nuqayah" class="h-5 w-5" />
+                        <img src="nuqayah.png" alt="Nuqayah" class="size-5" />
                     </a>
                 </div>
             </div>

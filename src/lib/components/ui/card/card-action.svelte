@@ -1,10 +1,7 @@
 <div
     bind:this={ref}
-    data-slot="card"
-    class={cn(
-        'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm',
-        className,
-    )}
+    data-slot="card-action"
+    class={cn('col-start-2 row-span-2 row-start-1 self-start justify-self-end', className)}
     {...restProps}
 >
     {@render children?.()}

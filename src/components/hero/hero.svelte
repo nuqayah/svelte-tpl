@@ -29,9 +29,9 @@
                     <div
                         class="bg-muted absolute top-0 right-0 left-0 flex h-8 items-center space-x-2 px-4"
                     >
-                        <div class="h-3 w-3 rounded-full bg-red-500"></div>
-                        <div class="h-3 w-3 rounded-full bg-yellow-500"></div>
-                        <div class="h-3 w-3 rounded-full bg-green-500"></div>
+                        <div class="size-3 rounded-full bg-red-500"></div>
+                        <div class="size-3 rounded-full bg-yellow-500"></div>
+                        <div class="size-3 rounded-full bg-green-500"></div>
                     </div>
                     <pre class="language-svelte overflow-x-auto p-4 pt-12 text-sm">
                         <code class="language-svelte">{codeExample}</code>

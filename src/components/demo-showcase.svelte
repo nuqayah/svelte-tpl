@@ -21,7 +21,7 @@
                 <CardHeader class="from-primary/10 bg-gradient-to-r to-violet-500/10 pb-8">
                     <div class="flex items-center gap-2">
                         <div class="bg-primary/20 rounded-full p-2">
-                            <UserIcon class="text-primary h-5 w-5" />
+                            <UserIcon class="text-primary size-5" />
                         </div>
                         <CardTitle>Authentication</CardTitle>
                     </div>
@@ -64,7 +64,7 @@
                 <CardHeader class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 pb-8">
                     <div class="flex items-center gap-2">
                         <div class="rounded-full bg-blue-500/20 p-2">
-                            <CrownIcon class="h-5 w-5 text-blue-500" />
+                            <CrownIcon class="size-5 text-blue-500" />
                         </div>
                         <CardTitle class="text-lg font-semibold">Premium Plan</CardTitle>
                     </div>
@@ -85,15 +85,15 @@
                             </div>
                             <ul class="space-y-2">
                                 <li class="flex items-center gap-2">
-                                    <CheckIcon class="h-5 w-5 text-green-500" />
+                                    <CheckIcon class="size-5 text-green-500" />
                                     <span>Unlimited projects</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <CheckIcon class="h-5 w-5 text-green-500" />
+                                    <CheckIcon class="size-5 text-green-500" />
                                     <span>Priority support</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <CheckIcon class="h-5 w-5 text-green-500" />
+                                    <CheckIcon class="size-5 text-green-500" />
                                     <span>Custom branding</span>
                                 </li>
                             </ul>
@@ -110,19 +110,19 @@
                             </div>
                             <ul class="space-y-2">
                                 <li class="flex items-center gap-2">
-                                    <CheckIcon class="h-5 w-5 text-green-500" />
+                                    <CheckIcon class="size-5 text-green-500" />
                                     <span>Unlimited projects</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <CheckIcon class="h-5 w-5 text-green-500" />
+                                    <CheckIcon class="size-5 text-green-500" />
                                     <span>Priority support</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <CheckIcon class="h-5 w-5 text-green-500" />
+                                    <CheckIcon class="size-5 text-green-500" />
                                     <span>Custom branding</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <CheckIcon class="h-5 w-5 text-green-500" />
+                                    <CheckIcon class="size-5 text-green-500" />
                                     <span>Annual strategy review</span>
                                 </li>
                             </ul>
@@ -144,7 +144,7 @@
                 <CardHeader class="bg-gradient-to-r from-amber-500/10 to-orange-500/10 pb-8">
                     <div class="flex items-center gap-2">
                         <div class="rounded-full bg-amber-500/20 p-2">
-                            <CalendarIcon class="h-5 w-5 text-amber-500" />
+                            <CalendarIcon class="size-5 text-amber-500" />
                         </div>
                         <CardTitle>Calendar</CardTitle>
                     </div>

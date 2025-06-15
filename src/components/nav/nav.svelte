@@ -8,7 +8,7 @@
                 <img
                     src="/nuqayah.png"
                     alt="Logo"
-                    class="h-6 w-6 transition-transform duration-300 group-hover:scale-110"
+                    class="size-6 transition-transform duration-300 group-hover:scale-110"
                 />
             </div>
             <span
@@ -27,13 +27,13 @@
             <Button
                 variant="ghost"
                 size="icon"
-                class="h-9 w-9"
+                class="size-9"
                 onclick={() => (is_menu_open = !is_menu_open)}
             >
                 {#if is_menu_open}
-                    <XIcon class="h-5 w-5" />
+                    <XIcon class="size-5" />
                 {:else}
-                    <MenuIcon class="h-5 w-5" />
+                    <MenuIcon class="size-5" />
                 {/if}
             </Button>
         </div>
@@ -52,9 +52,9 @@
                     class:bg-indigo-500={is_dark_mode}
                 ></div>
                 {#if is_dark_mode}
-                    <SunIcon class="h-5 w-5 rotate-0 transition-transform duration-500" />
+                    <SunIcon class="size-5 rotate-0 transition-transform duration-500" />
                 {:else}
-                    <MoonIcon class="h-5 w-5 rotate-0 transition-transform duration-500" />
+                    <MoonIcon class="size-5 rotate-0 transition-transform duration-500" />
                 {/if}
             </Button>
         </div>
@@ -76,9 +76,9 @@
                     <Button class="w-full">Get Started</Button>
                     <Button variant="ghost" size="icon" class="ml-2" onclick={toggle_dark_mode}>
                         {#if is_dark_mode}
-                            <SunIcon class="h-5 w-5" />
+                            <SunIcon class="size-5" />
                         {:else}
-                            <MoonIcon class="h-5 w-5" />
+                            <MoonIcon class="size-5" />
                         {/if}
                     </Button>
                 </div>
@@ -98,13 +98,18 @@ import NavLinks from './nav-links.svelte'
 
 // Mobile menu state
 let is_menu_open = $state(false)
-let is_dark_mode = $derived(appstate.theme === 'dark')
+let is_dark_mode = $state(false)
+
+// Initialize dark mode based on appstate
+$effect(() => {
+    const state = $appstate
+    is_dark_mode = state.theme === 'dark'
+})
 
 function toggle_dark_mode() {
     appstate.update(state => ({
         ...state,
         theme: state.theme === 'dark' ? 'light' : 'dark',
     }))
-    is_dark_mode = !is_dark_mode
 }
 </script>

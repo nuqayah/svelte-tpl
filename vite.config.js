@@ -1,4 +1,5 @@
 import {svelte} from '@sveltejs/vite-plugin-svelte'
+import tailwindcss from '@tailwindcss/vite'
 import {execFileSync as exec} from 'child_process'
 import path from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -52,6 +53,7 @@ export default {
     },
     define: is_build ? {} : vars,
     plugins: [
+        tailwindcss(),
         svelte({
             onwarn(warning, handler) {
                 const IGNORED_WARNINGS = [

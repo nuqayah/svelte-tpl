@@ -7,9 +7,9 @@
     <a href={link} target="_blank" rel="noopener noreferrer" class="block">
         <Card.Header class="space-y-2">
             <div
-                class="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-full p-2 transition-transform duration-300 group-hover:scale-110"
+                class="bg-primary/10 flex size-12 items-center justify-center rounded-full p-2 transition-transform duration-300 group-hover:scale-110"
             >
-                <Icon class="text-primary h-6 w-6" />
+                <Icon class="text-primary size-6" />
             </div>
             <Card.Title
                 class="group-hover:text-primary text-xl font-bold transition-colors duration-300"
@@ -27,7 +27,7 @@
             <span
                 class="text-primary flex translate-x-2 transform items-center text-sm font-medium opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
             >
-                Learn more <ArrowRightIcon class="ml-1 h-4 w-4" />
+                Learn more <ArrowRightIcon class="ml-1 size-4" />
             </span>
         </Card.Footer>
     </a>

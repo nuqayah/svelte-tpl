@@ -1,15 +1,3 @@
-/* tailwind */
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@custom-variant dark (&:where(.dark, .dark *));
-
-@layer components {
-  .form-select {
-    @apply appearance-none rounded border border-solid border-gray-300 bg-no-repeat px-2 pe-5 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none;
-  }
-}
-
-/* base */
 @font-face {
   font-family: Kitab;
   src: url(https://fonts.nuqayah.com/kitab-base.woff2?v4);

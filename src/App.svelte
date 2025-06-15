@@ -9,8 +9,10 @@
         {/if}
     {/if}
 </main>
+<ModeWatcher />
 
 <script module>
+import {ModeWatcher} from 'mode-watcher'
 import navaid from 'navaid'
 
 import {session} from '~/stores.svelte.js'

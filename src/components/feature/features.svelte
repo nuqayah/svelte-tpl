@@ -20,7 +20,7 @@
             <Button size="lg" variant="outline" class="group">
                 <span>View All Features</span>
                 <ArrowRightIcon
-                    class="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                    class="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1"
                 />
             </Button>
         </div>

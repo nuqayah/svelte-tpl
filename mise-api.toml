@@ -1,0 +1,27 @@
+[tools]
+python = '3.13'
+
+[tasks.dev]
+description = 'Start client and API'
+depends = ['dev-api', 'dev-client']
+alias = 'default'
+
+[tasks.dev-client]
+description = 'Start client'
+run = 'pnpm --color run dev'
+
+[tasks.dev-api]
+description = 'Start FastAPI backend'
+env = { FORCE_COLOR = '1' }
+run = 'uvicorn api.main:app --reload --port $API_PORT'
+
+[settings]
+python.uv_venv_auto = true
+
+[env]
+VITE_PORT = 5020
+API_PORT = 8005
+API_WORKERS = 4
+
+POSTGRES_PORT = 5432
+REDIS_PORT = 6379

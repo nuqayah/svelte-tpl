@@ -7,3 +7,7 @@ node_modules
 
 auto-imports.d.ts
 /src/screenshots
+
+__pycache__
+.venv/
+.mise.local.toml

@@ -32,4 +32,5 @@ export default {
             },
         },
     ],
+    tailwindStylesheet: './src/css/tailwind.css',
 }

@@ -3,9 +3,23 @@ pre-commit:
     eslint:
       glob: "*.{js,ts,svelte}"
       run: pnpm exec eslint --fix {staged_files} && git add {staged_files}
+
     prettier:
       glob: '*.{js,ts,svelte,html,css}'
       run: 'pnpm exec prettier --write {staged_files} && git add {staged_files}'
+
+    check-eof-newline:
+      file_types: text
+      run: '! rg -q -U "[^\n]\z" {staged_files}'
+
+    check-trailing-ws:
+      file_types: text
+      run: '! rg -q "[ \t]+$" {staged_files}'
+
+    check-camel-case:
+      glob: '*.{js,svelte}'
+      run: '! rg -q "\b(?:let|const)[ \t]+[a-z][a-z0-9]*[A-Z][A-Za-z0-9_]*" {staged_files}'
+
 post-merge:
   commands:
     install-deps:

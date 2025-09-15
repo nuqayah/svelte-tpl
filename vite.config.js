@@ -20,12 +20,6 @@ export default {
     publicDir: is_build ? false : 'public',
     css: {
         transformer: 'lightningcss',
-        lightningcss: {
-            drafts: {
-                nesting: true,
-                customMedia: true,
-            },
-        },
     },
     build: {
         reportCompressedSize: false,

@@ -23,9 +23,7 @@ export default [
     {
         ignores: [
             'misc/**/*',
-            ...'node_modules,dist,dist-native,android,ios,public'
-                .split(',')
-                .map(x => x + '/**/*'),
+            ...'node_modules,dist,dist-native,android,ios,public'.split(',').map(x => x + '/**/*'),
             'build.js',
         ],
     },
@@ -36,7 +34,7 @@ export default [
         },
     },
     {
-        files: ['vite.config.js', 'postcss.config.js'],
+        files: ['vite.config.js'],
         languageOptions: {
             globals: {...globals.es2021, ...globals.node},
         },

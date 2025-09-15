@@ -1,27 +1,27 @@
-<footer class="bg-muted/30 border-t">
+<footer class="border-t bg-muted/30">
     <div class="container py-12">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
             <!-- Brand -->
             <div class="space-y-4">
                 <div class="flex items-center gap-2">
                     <div
-                        class="bg-primary/10 relative flex size-9 items-center justify-center overflow-hidden rounded-lg"
+                        class="relative flex size-9 items-center justify-center overflow-hidden rounded-lg bg-primary/10"
                     >
                         <img src="nuqayah.png" alt="Logo" class="size-6" />
                     </div>
                     <span
-                        class="from-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
+                        class="bg-linear-to-r from-foreground to-foreground/80 bg-clip-text text-xl font-bold text-transparent"
                         >SvelteUI</span
                     >
                 </div>
-                <p class="text-muted-foreground max-w-xs text-sm">
+                <p class="max-w-xs text-sm text-muted-foreground">
                     Building beautiful, accessible, and performant web applications with Svelte 5
                     and Tailwind CSS 4.
                 </p>
                 <div class="flex items-center gap-4">
                     <a
                         href="https://github.com/nuqayah"
-                        class="text-muted-foreground hover:text-foreground transition-colors"
+                        class="text-muted-foreground transition-colors hover:text-foreground"
                     >
                         <div class="size-5 fill-[#181717] dark:fill-[#ffffff]">
                             {@html siGithub.svg}
@@ -29,7 +29,7 @@
                     </a>
                     <a
                         href="https://x.com/nuqayah"
-                        class="text-muted-foreground hover:text-foreground transition-colors"
+                        class="text-muted-foreground transition-colors hover:text-foreground"
                     >
                         <div class="size-5 fill-[#000000]">
                             {@html siX.svg}
@@ -37,7 +37,7 @@
                     </a>
                     <a
                         href="https://nuqayah.com"
-                        class="text-muted-foreground hover:text-foreground transition-colors"
+                        class="text-muted-foreground transition-colors hover:text-foreground"
                     >
                         <img src="nuqayah.png" alt="Nuqayah" class="size-5" />
                     </a>
@@ -51,7 +51,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Features</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -70,7 +70,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Pricing</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -89,7 +89,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Documentation</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -108,7 +108,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Changelog</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -132,7 +132,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >About</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -151,7 +151,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Blog</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -170,7 +170,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Careers</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -187,7 +187,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Contact</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -213,7 +213,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Privacy</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -232,7 +232,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Terms</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -251,7 +251,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Cookie Policy</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -268,7 +268,7 @@
                     <li>
                         <Dialog.Root>
                             <Dialog.Trigger
-                                class="text-muted-foreground hover:text-foreground transition-colors"
+                                class="text-muted-foreground transition-colors hover:text-foreground"
                                 >Licenses</Dialog.Trigger
                             >
                             <Dialog.Content>
@@ -288,9 +288,9 @@
             </div>
         </div>
 
-        <div class="border-muted mt-12 border-t pt-8">
+        <div class="mt-12 border-t border-muted pt-8">
             <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
-                <span class="text-muted-foreground text-sm"
+                <span class="text-sm text-muted-foreground"
                     >© 2025 Nuqayah. All rights reserved.</span
                 >
                 <div class="flex items-center gap-4">

@@ -1,31 +1,31 @@
 <Card.Root
-    class="group from-background to-muted/50 relative overflow-hidden border-none bg-gradient-to-br shadow-md transition-all duration-300 hover:shadow-xl"
+    class="group relative overflow-hidden border-none bg-linear-to-br from-background to-muted/50 shadow-md transition-all duration-300 hover:shadow-xl"
 >
     <div
-        class="bg-primary/5 absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        class="absolute inset-0 bg-primary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
     ></div>
     <a href={link} target="_blank" rel="noopener noreferrer" class="block">
         <Card.Header class="space-y-2">
             <div
-                class="bg-primary/10 flex size-12 items-center justify-center rounded-full p-2 transition-transform duration-300 group-hover:scale-110"
+                class="flex size-12 items-center justify-center rounded-full bg-primary/10 p-2 transition-transform duration-300 group-hover:scale-110"
             >
-                <Icon class="text-primary size-6" />
+                <Icon class="size-6 text-primary" />
             </div>
             <Card.Title
-                class="group-hover:text-primary text-xl font-bold transition-colors duration-300"
+                class="text-xl font-bold transition-colors duration-300 group-hover:text-primary"
                 >{title}</Card.Title
             >
         </Card.Header>
         <Card.Content>
             <p
-                class="text-muted-foreground group-hover:text-foreground/90 transition-colors duration-300"
+                class="text-muted-foreground transition-colors duration-300 group-hover:text-foreground/90"
             >
                 {description}
             </p>
         </Card.Content>
         <Card.Footer class="pt-0 pb-4">
             <span
-                class="text-primary flex translate-x-2 transform items-center text-sm font-medium opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                class="flex translate-x-2 transform items-center text-sm font-medium text-primary opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
             >
                 Learn more <ArrowRightIcon class="ml-1 size-4" />
             </span>

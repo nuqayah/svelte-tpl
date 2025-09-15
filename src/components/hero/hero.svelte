@@ -1,17 +1,17 @@
 <section id="hero" class="relative overflow-hidden py-24 md:py-32">
     <div class="bg-grid-pattern absolute inset-0 opacity-5"></div>
-    <div class="from-primary/5 absolute inset-0 bg-gradient-to-b to-transparent"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-primary/5 to-transparent"></div>
 
     <div class="relative z-10 container">
         <div class="flex flex-col items-center gap-8 text-center">
             <div in:fly={{y: 50, duration: 500, delay: 200}}>
                 <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                     Build Beautiful UIs with <span
-                        class="from-primary to-primary-foreground bg-gradient-to-r bg-clip-text text-transparent"
+                        class="bg-linear-to-r from-primary to-primary-foreground bg-clip-text text-transparent"
                         >Svelte</span
                     >
                 </h1>
-                <p class="text-muted-foreground mx-auto mt-6 max-w-[700px] text-lg md:text-xl">
+                <p class="mx-auto mt-6 max-w-[700px] text-lg text-muted-foreground md:text-xl">
                     Create stunning web applications using Svelte 5, shadcn-svelte, and Tailwind CSS
                     4. Fast, responsive, and beautiful by default.
                 </p>
@@ -22,12 +22,12 @@
             </div>
 
             <div
-                class="bg-card/50 mt-12 w-full max-w-4xl overflow-hidden rounded-lg border shadow-xl backdrop-blur-sm"
+                class="mt-12 w-full max-w-4xl overflow-hidden rounded-lg border bg-card/50 shadow-xl backdrop-blur-sm"
                 in:fade={{delay: 900}}
             >
                 <div class="relative">
                     <div
-                        class="bg-muted absolute top-0 right-0 left-0 flex h-8 items-center space-x-2 px-4"
+                        class="absolute top-0 right-0 left-0 flex h-8 items-center space-x-2 bg-muted px-4"
                     >
                         <div class="size-3 rounded-full bg-red-500"></div>
                         <div class="size-3 rounded-full bg-yellow-500"></div>

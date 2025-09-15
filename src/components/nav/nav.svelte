@@ -1,9 +1,9 @@
-<header class="bg-background/80 sticky top-0 right-0 left-0 z-50 border-b backdrop-blur-md">
+<header class="sticky top-0 right-0 left-0 z-50 border-b bg-background/80 backdrop-blur-md">
     <nav class="container flex h-16 items-center justify-between">
         <!-- Logo -->
         <a href="/" class="group flex items-center gap-2">
             <div
-                class="bg-primary/10 group-hover:bg-primary/20 relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg transition-all duration-300"
+                class="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg bg-primary/10 transition-all duration-300 group-hover:bg-primary/20"
             >
                 <img
                     src="/nuqayah.png"
@@ -12,7 +12,7 @@
                 />
             </div>
             <span
-                class="from-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent"
+                class="bg-linear-to-r from-foreground to-foreground/80 bg-clip-text text-xl font-bold text-transparent"
                 >SvelteUI</span
             >
         </a>
@@ -63,7 +63,7 @@
     <!-- Mobile menu -->
     {#if is_menu_open}
         <div class="md:hidden" transition:slide={{duration: 200}}>
-            <div class="bg-background space-y-3 border-b px-4 py-4">
+            <div class="space-y-3 border-b bg-background px-4 py-4">
                 <Button variant="ghost" class="w-full justify-start" href="#features"
                     >Features</Button
                 >

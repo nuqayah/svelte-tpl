@@ -1,10 +1,10 @@
 <section id="features" class="relative overflow-hidden py-24">
-    <div class="from-background via-muted/30 to-background absolute inset-0 bg-gradient-to-b"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-background via-muted/30 to-background"></div>
     <div class="relative z-10 container" in:fade={{duration: 500}}>
         <h2 class="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Features that Make a <span class="text-primary">Difference</span>
         </h2>
-        <p class="text-muted-foreground mx-auto mt-4 max-w-[700px] text-center">
+        <p class="mx-auto mt-4 max-w-[700px] text-center text-muted-foreground">
             Everything you need to build modern web applications with Svelte 5 and Tailwind CSS 4.
         </p>
 

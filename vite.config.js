@@ -18,6 +18,21 @@ const vars = {
 /** @type {import('vite').UserConfig}*/
 export default {
     publicDir: is_build ? false : 'public',
+    css: {
+        transformer: 'lightningcss',
+        lightningcss: {
+            targets: {
+                chrome: 100 << 16,
+                firefox: 100 << 16,
+                safari: 15 << 16,
+                edge: 100 << 16,
+            },
+            drafts: {
+                nesting: true,
+                customMedia: true,
+            },
+        },
+    },
     build: {
         reportCompressedSize: false,
         minify: false,

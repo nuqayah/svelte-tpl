@@ -21,12 +21,6 @@ export default {
     css: {
         transformer: 'lightningcss',
         lightningcss: {
-            targets: {
-                chrome: 100 << 16,
-                firefox: 100 << 16,
-                safari: 15 << 16,
-                edge: 100 << 16,
-            },
             drafts: {
                 nesting: true,
                 customMedia: true,

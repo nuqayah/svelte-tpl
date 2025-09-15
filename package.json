@@ -56,9 +56,9 @@
     "dev": "vite dev"
   },
   "browserslist": [
-    "last 40 chrome version",
-    "last 35 firefox version",
-    "last 15 safari version"
+  "> 0.25%",
+  "not dead", 
+  "Safari >= 15"
   ],
   "type": "module"
 }
